@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: brown;
+            color: pink;
+            font-size: 60px;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-image: url(./gachi.gif);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .qwe {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 40vh;
+        }
+
+        .qwe2 {
+            display: flex;
+            justify-content: center;
+        }
+
+        img {
+            height: 200px;
+        }
+
+        .qwe4 {
+            text-align: center;
+            color: 60px;
+        }
+
+        .rt {
+            display: none;
+            z-index: 1;
+            position: absolute;
+        }
+
+        .po {
+
+            display: flex;
+            justify-content: center;
+            display: absolute;
+            z-index: 1000;
+        }
+
+        .svetlana {
+            display: none;
+            position: absolute;
+            top: 0;
+        }
+
+        .huy {
+            position: absolute;
+            width: 1920px;
+            height: 1080px;
+            top: 0;
+
+        }
+
+        .po1 {
+            position: absolute;
+            z-index: 2000px;
+            left: 40%;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        a:visited {
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header style="background-color: black;">
+        <nav style="display: flex; justify-content: space-between;">
+            <a href="">хуй</a>
+            <a href="">пизда</a>
+            <a href="">залупа</a>
+        </nav>
+    </header>
+
+    <div>
+        <div class="qwe">
+            <div class="qwe1">Verdera app</div>
+        </div>
+        <div class="po">
+            <input type="button" value="СВЕТЛАНА" onmousedown="viewSvetlana()">
+        </div>
+        <div class="po">
+            <input type="button" value="НАЖМИ" onmousedown="viewDiv()">
+        </div>
+        <div class="rt" id="rt">
+            <div class="qwe4">Соскуфился</div>
+            <div class="qwe2">
+                <div><img src="./KpoOLiVaaFI.jpg" alt=""></div>
+                <div>ДО ВКБ4 | ПОСЛЕ</div>
+                <div><img src="./gachi.gif" alt=""></div>
+            </div>
+        </div>
+
+
+        <div class="svetlana" id="svetlana">
+            <img src="./541329.gif" alt="" class="huy">
+            <div class="po1" id="po1">
+                <input type="button" value="УБРАТЬ" onmousedown="hideSvetlana()">
+            </div>
+        </div>
+    </div>
+    <footer style="background-color: black; position: absolute; bottom: 0; width: 100%; z-index: 500;">
+        <nav style="display: flex; justify-content: space-between;">
+            <a href="">хуй</a>
+            <a href="">пизда</a>
+            <a href="">залупа</a>
+        </nav>
+    </footer>
+
+    <script>
+        function viewDiv() {
+            document.getElementById("rt").style.display = 'block'
+        };
+        function viewSvetlana() {
+            document.getElementById("svetlana").style.display = 'block'
+            setTimeout(() => confirm('300 метров от вас') ? '' : alert('Похуй'), 100)
+        };
+        function hideSvetlana() {
+            alert('хуй тебе')
+        }
+    </script>
+</body>
+
+</html>
